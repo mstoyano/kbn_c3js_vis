@@ -1,4 +1,4 @@
-# TFG
+# C3JS Visualizations Plugin for Kibana 5
 
 Installation steps:
 
