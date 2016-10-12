@@ -2,16 +2,79 @@
     <form>
     	<h4>Chart Types</h4>
     	<div class="opt-group">
-	    	<div ng-repeat="(key, value) in $root.editorParams.label">
+	    	<div ng-show="$root.label_keys.length > 0">
 		    	<div class="form-group">
-			      	<label for="sel1">{{key}}</label>
-			      	<select class="form-control" id="sel1" ng-model="vis.params.editorPanel.types[key]">
-			      		<option value=""></option>
+			      	<label for="sel1">{{$root.label_keys[0]}}</label>
+			      	<select class="form-control" id="sel1" ng-model="vis.params.type1">
 				        <option value="bar">Bar chart</option>
 				        <option value="line">Line Chart</option>
 				        <option value="spline">Spline Chart</option>
 				        <option value="step">Step Chart</option>
-				        <option value="scatter">Scatter Plot</option>
+				        <option value="scatter">Dot Chart</option>
+				        <option value="area">Area Chart</option>
+				        <option value="area-spline">Area-Spline Chart</option>
+				        <option value="area-step">Area-Step Chart</option>
+			      	</select>
+		    	</div>
+	    	</div>
+
+	    	<div ng-show="$root.label_keys.length > 1">
+		    	<div class="form-group">
+			      	<label for="sel1">{{$root.label_keys[1]}}</label>
+			      	<select class="form-control" id="sel1" ng-model="vis.params.type2">
+				        <option value="bar">Bar chart</option>
+				        <option value="line">Line Chart</option>
+				        <option value="spline">Spline Chart</option>
+				        <option value="step">Step Chart</option>
+				        <option value="scatter">Dot Chart</option>
+				        <option value="area">Area Chart</option>
+				        <option value="area-spline">Area-Spline Chart</option>
+				        <option value="area-step">Area-Step Chart</option>
+			      	</select>
+		    	</div>
+	    	</div>
+
+	    	<div ng-show="$root.label_keys.length > 2">
+		    	<div class="form-group">
+			      	<label for="sel1">{{$root.label_keys[2]}}</label>
+			      	<select class="form-control" id="sel1" ng-model="vis.params.type3">
+				        <option value="bar">Bar chart</option>
+				        <option value="line">Line Chart</option>
+				        <option value="spline">Spline Chart</option>
+				        <option value="step">Step Chart</option>
+				        <option value="scatter">Dot Chart</option>
+				        <option value="area">Area Chart</option>
+				        <option value="area-spline">Area-Spline Chart</option>
+				        <option value="area-step">Area-Step Chart</option>
+			      	</select>
+		    	</div>
+	    	</div>
+
+	    	<div ng-show="$root.label_keys.length > 3">
+		    	<div class="form-group">
+			      	<label for="sel1">{{$root.label_keys[3]}}</label>
+			      	<select class="form-control" id="sel1" ng-model="vis.params.type4">
+				        <option value="bar">Bar chart</option>
+				        <option value="line">Line Chart</option>
+				        <option value="spline">Spline Chart</option>
+				        <option value="step">Step Chart</option>
+				        <option value="scatter">Dot Chart</option>
+				        <option value="area">Area Chart</option>
+				        <option value="area-spline">Area-Spline Chart</option>
+				        <option value="area-step">Area-Step Chart</option>
+			      	</select>
+		    	</div>
+	    	</div>
+
+	    	<div ng-show="$root.label_keys.length > 4">
+		    	<div class="form-group">
+			      	<label for="sel1">{{$root.label_keys[4]}}</label>
+			      	<select class="form-control" id="sel1" ng-model="vis.params.type5">
+				        <option value="bar">Bar chart</option>
+				        <option value="line">Line Chart</option>
+				        <option value="spline">Spline Chart</option>
+				        <option value="step">Step Chart</option>
+				        <option value="scatter">Dot Chart</option>
 				        <option value="area">Area Chart</option>
 				        <option value="area-spline">Area-Spline Chart</option>
 				        <option value="area-step">Area-Step Chart</option>
@@ -25,20 +88,88 @@
 <div class="form-group">
     <form>
     	<h4>Chart Colors</h4>
-    	<div class="opt-group">
-	    	<div ng-repeat="(key, value) in $root.editorParams.label">
-		    	<div class="form-group">
-			      	<label for="sel2">{{key}}</label>
-			      	<input type="color" name="sel2" id="sel2" ng-model="vis.params.editorPanel.colors[key]" class="form-control">
-		    	</div>
-	    	</div>
-    	</div>
-  	</form>
+
+		<div ng-show="$root.label_keys.length > 0">
+			<label for="sel3">{{$root.label_keys[0]}}</label>
+			<input type="color" name="sel3" id="sel3" ng-model="vis.params.color1" class="form-control">
+
+		</div>
+
+		<div ng-show="$root.label_keys.length > 1">
+			<label for="sel3">{{$root.label_keys[1]}}</label>
+			<input type="color" name="sel3" id="sel3" ng-model="vis.params.color2" class="form-control">
+
+		</div>
+
+		<div ng-show="$root.label_keys.length > 2">
+			<label for="sel3">{{$root.label_keys[2]}}</label>
+			<input type="color" name="sel3" id="sel3" ng-model="vis.params.color3" class="form-control">
+
+		</div>
+
+		<div ng-show="$root.label_keys.length > 3">
+			<label for="sel3">{{$root.label_keys[3]}}</label>
+			<input type="color" name="sel3" id="sel3" ng-model="vis.params.color4" class="form-control">
+
+		</div>
+
+		<div ng-show="$root.label_keys.length > 4">
+			<label for="sel3">{{$root.label_keys[4]}}</label>
+			<input type="color" name="sel3" id="sel3" ng-model="vis.params.color5" class="form-control">
+
+		</div>
+	</form>
 </div>
 
 <div class="form-group">
-	<label> Enable zoom </label>
-	<input type="checkbox" ng-model="vis.params.enableZoom">
+    <form>
+    	<h4>Others</h4>
+
+    	<div clas="show-if-chart" ng-show="$root.show_chart">
+
+	    	<div class="form-group">
+				<label> Hide Points </label>
+				<input type="checkbox" ng-model="vis.params.hidePoints"> (For line and spline charts)
+			</div>
+
+			<div class="form-group">
+				<label> Enable zoom </label>
+				<input type="checkbox" ng-model="vis.params.enableZoom">
+			</div>
+
+			<div class="form-group">
+				<label> Show grid lines </label>
+				<input type="checkbox" ng-model="vis.params.gridlines"> 
+			</div>
+
+			<div class="form-group">
+				<!-- ng-show="$root.activate_grouped" -->
+				<label> Stacked Bar Mode </label>
+				<input type="checkbox" ng-model="vis.params.grouped"> (Needs at least 2 bar charts)
+			</div>
+
+			<div class="form-group">
+				<label> Activate Data Labels </label>
+				<input type="checkbox" ng-model="vis.params.dataLabels"> 
+			</div>
+
+			<div class="form-group">
+				<label> Show just a few x-axis tick values </label>
+				<input type="checkbox" ng-model="vis.params.few_x_axis"> 
+			</div>
+
+			<div class="form-group">
+		      	<label for="sel-legend">Choose legend position</label>
+		      	<select class="form-control" id="sel-legend" ng-model="vis.params.legend_position">
+			        <option value="right">Right</option>
+			        <option value="bottom">Bottom</option>
+		      	</select>
+	    	</div>
+
+    	</div>
+
+	</form>
 </div>
+
 
 

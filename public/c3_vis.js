@@ -16,14 +16,30 @@ function c3VisProvider(Private) {
 	
     return new TemplateVisType({
   		name: 'c3Charts',
-  		title: 'C3 linear charts widget',
+  		title: 'C3 charts widget',
   		icon: 'fa-angellist',
-  		description: 'Nice linear charts widget which uses C3JS library for your data representations.',
+  		description: 'Nice charts widget which uses C3JS library for your data representations.',
   		template: c3VisTemplate,
   		params: {
   			defaults: {
-          		editorPanel: {},
-          		enableZoom: false,
+          type1: 'line',
+          color1: '#1f77b4',
+          type2: 'line',
+          color2: '#ff7f0e',
+          type3: 'line',
+          color3: '#2ca02c', 
+          type4: 'line',
+          color4: '#d62728',
+          type5: 'line',
+          color5: '#9467bd',
+          enableZoom: false,
+          dataLabels: false,
+          hidePoints: false,
+          gridlines: false,
+          few_x_axis: false,
+          legend_position: "right",
+          time_format: "%d-%m-%Y",
+          grouped: false
 
   			},
             editor: c3VisParamsTemplate
@@ -44,7 +60,7 @@ function c3VisProvider(Private) {
                 title: 'X-Axis',
                 min: 1,
                 max: 1,
-                aggFilter: ['!geohash_grid', '!ip_range']
+                aggFilter: ['!geohash_grid']
             }
 	    ])
     });
