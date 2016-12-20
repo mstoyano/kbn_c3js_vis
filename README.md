@@ -48,3 +48,6 @@ Anyone is welcome to contribute to my project. There are various ways you can co
 1. Raise an [Issue](https://github.com/mstoyano/kbn_c3js_vis/issues) on GitHub
 2. Send me a Pull Request with your bug fixes and/or new features
 3. Contact via email: **mom4il13@hotmail.com**
+
+### Feedback is highly appreciated!
+Please let me receive your screenshots using this plugin and your project purposes. That would help me a lot for my thesis degree. You can send me a email or raise an [Issue](https://github.com/mstoyano/kbn_c3js_vis/issues) on GitHub. Thank you in advance and best regards.
