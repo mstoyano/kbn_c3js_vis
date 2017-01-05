@@ -1,10 +1,15 @@
 {
 	"name": "k5p-c3",
+	"description": "This is Kibana 5 plugin which uses the JavaScript library C3.js for data representations",
 	"version": "5.0.0-rc1",
-	"authors": [
-  		"Momchil Stoyanov Momchilov <mom4il13@hotmail.com>"
-  	],
-  	"dependencies" : {
-    	"c3": "0.4.11"
-  	}
+	"homepage": "https://mstoyano.github.io/",
+	"license": "Apache-2.0",
+	"author": "Momchil Stoyanov <mom4il13@hotmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mstoyano/kbn_c3js_vis"
+	},
+	"dependencies" : {
+		"c3": "0.4.11"
+	}
 }

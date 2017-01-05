@@ -8,6 +8,7 @@ import c3VisParamsTemplate from 'plugins/k5p-c3/c3_vis_params.html';
 // register the provider with the visTypes registry
 require('ui/registry/vis_types').register(c3VisProvider);
 
+// Require the JavaScript CSS file
 require('../node_modules/c3/c3.css');
 
 function c3VisProvider(Private) {
@@ -17,8 +18,8 @@ function c3VisProvider(Private) {
     return new TemplateVisType({
   		name: 'c3Charts',
   		title: 'C3 charts widget',
-  		icon: 'fa-angellist',
-  		description: 'Nice charts widget which uses C3JS library for your data representations.',
+  		icon: 'fa-spinner',
+  		description: 'This is Kibana 5 plugin which uses the JavaScript library C3.js for data representations.',
   		template: c3VisTemplate,
   		params: {
   			defaults: {
@@ -51,8 +52,7 @@ function c3VisProvider(Private) {
 	          	title: 'Y-axis metric',
 	          	min: 1,
 	          	max: 5,
-              defaults: [ { type: 'count', schema: 'metric' } ],
-              //aggFilter: ['count']     	
+              defaults: [ { type: 'count', schema: 'metric' } ],   	
             },
             {
                 group: 'buckets',
