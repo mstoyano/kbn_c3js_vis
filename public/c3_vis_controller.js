@@ -205,6 +205,10 @@ module.controller('KbnC3VisController', function($scope, $element, Private){
 		config.point = {"show": !$scope.vis.params.hidePoints};
 		config.zoom = {"enabled" : $scope.vis.params.enableZoom};
 
+		// Destroy last chart if exists
+		if($scope.chart !== null) {
+			$scope.chart.destroy();
+		}
 		// Generate and draw
 		$scope.chart = c3.generate(config);
 
