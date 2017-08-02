@@ -1,6 +1,7 @@
-import uiModules from 'ui/modules';
-import AggResponseTabifyTabifyProvider from 'ui/agg_response/tabify/tabify';
-import errors from 'ui/errors'; 
+import { uiModules } from 'ui/modules';
+//import { AggResponseTabifyTabifyProvider } from 'ui/agg_response/tabify/tabify';
+import { AggResponseTabifyProvider } from 'ui/agg_response/tabify/tabify';
+import { errors } from 'ui/errors'; 
 
 // get the kibana/table_vis module, and make sure that it requires the "kibana" module if it didn't already
 const module = uiModules.get('kibana/c3_vis', ['kibana']);
@@ -15,7 +16,7 @@ module.controller('KbnC3VisController', function($scope, $element, Private){
 	$scope.$root.label_keys = [];
 	$scope.$root.editorParams = {};
 	$scope.$root.activate_grouped = false;
-	const tabifyAggResponse = Private(AggResponseTabifyTabifyProvider);
+	const tabifyAggResponse = Private(AggResponseTabifyProvider);
 	var x_axis_values = [];
 	var timeseries = [];
 	var parsed_data = [];
