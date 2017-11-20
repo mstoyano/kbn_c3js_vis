@@ -1,18 +1,22 @@
-import 'plugins/k5p-c3/c3_vis.less';
-import 'plugins/k5p-c3/c3_vis_controller';
-import TemplateVisTypeTemplateVisTypeProvider from 'ui/template_vis_type/template_vis_type';
-import VisSchemasProvider from 'ui/vis/schemas';
+import { VisTypesRegistryProvider } from 'ui/registry/vis_types';
+import { TemplateVisTypeProvider } from 'ui/template_vis_type/template_vis_type';
+import { VisSchemasProvider } from 'ui/vis/schemas';
 import c3VisTemplate from 'plugins/k5p-c3/c3_vis.html';
 import c3VisParamsTemplate from 'plugins/k5p-c3/c3_vis_params.html';
 
+import 'plugins/k5p-c3/c3_vis.less';
+import 'plugins/k5p-c3/c3_vis_controller';
+
+
 // register the provider with the visTypes registry
-require('ui/registry/vis_types').register(c3VisProvider);
+//require('ui/registry/vis_types').register(c3VisProvider);
+VisTypesRegistryProvider.register(c3VisProvider);
 
 // Require the JavaScript CSS file
 require('../node_modules/c3/c3.css');
 
-function c3VisProvider(Private) {
-    const TemplateVisType = Private(TemplateVisTypeTemplateVisTypeProvider);
+export function c3VisProvider(Private) {
+    const TemplateVisType = Private(TemplateVisTypeProvider);
     const Schemas = Private(VisSchemasProvider);
 	
     return new TemplateVisType({
@@ -67,4 +71,4 @@ function c3VisProvider(Private) {
 }
 
 // export the provider so that the visType can be required with Private()
-export default c3VisProvider;
+//export default c3VisProvider;
